@@ -4,7 +4,7 @@ A convenient list of Apple platforms from [LLVM](https://github.com/llvm/llvm-pr
 
 ## Example
 
-Run: `cargo run --example all`
+### Run: `cargo run --example platform`
 
 Output:
 
@@ -22,6 +22,14 @@ Platform { platform: "WATCHOSSIMULATOR", id: 9, name: "watchossimulator", build_
 Platform { platform: "DRIVERKIT", id: 10, name: "driverkit", build_name: "driverkit", target: "driverkit", tapi_target: "driverkit", marketing: "DriverKit" }
 Platform { platform: "XROS", id: 11, name: "xros", build_name: "xros", target: "xros", tapi_target: "xros", marketing: "xrOS" }
 Platform { platform: "XROS_SIMULATOR", id: 12, name: "xrsimulator", build_name: "xrsimulator", target: "xrsimulator", tapi_target: "xros-simulator", marketing: "Simulator" }
+```
+
+### Run: `cargo run --example triple`
+
+Output:
+
+```shell
+Converted from aarch64-apple-visionos to arm64-apple-xros
 ```
 
 ## Authors
