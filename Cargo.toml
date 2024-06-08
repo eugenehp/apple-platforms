@@ -10,7 +10,10 @@ license = "MIT"
 categories = ["apple", "llvm", "clang", "platform", "macos"]
 
 [[example]]
-name = "all"
+name = "platform"
+
+[[example]]
+name = "triple"
 
 [dependencies]
 anyhow = "1.0.86"
