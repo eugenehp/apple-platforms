@@ -1,0 +1,13 @@
+[package]
+name = "apple-platforms"
+version = "0.0.1"
+edition = "2021"
+authors = ["Eugene Hauptmann"]
+homepage = "https://github.com/eugenehp/apple-platforms"
+repository = "https://github.com/eugenehp/apple-platforms"
+description = "A convenient list of Apple platforms from LLVM in Rust"
+license = "MIT"
+categories = ["apple", "llvm", "clang", "platform", "macos"]
+
+[[example]]
+name = "all"
