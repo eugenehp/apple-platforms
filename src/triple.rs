@@ -56,7 +56,39 @@ impl Triple {
             "aarch64-apple-visionos" => "arm64-apple-xros",
             "aarch64-apple-visionos-sim" => "aarch64-apple-xros-simulator",
             "aarch64-apple-darwin" => "arm64-apple-darwin",
+            // "aarch64-apple-watchos" => "",
+            // "arm64_32-apple-watchos" => "",
+            // "armv7k-apple-watchos" => "",
+            // "aarch64-apple-watchos-sim" => "",
+            // "x86_64-apple-watchos-sim" => "",
+            // "aarch64-apple-tvos" => "",
+            // "aarch64-apple-tvos-sim" => "",
+            // "x86_64-apple-tvos" => "",
             _ => target,
+        }
+    }
+}
+
+pub struct SDK;
+
+impl SDK {
+    pub fn target_to_sdk(target: &str) -> Result<&str> {
+        match target {
+            "aarch64-apple-darwin" | "x86_64-apple-darwin" => Ok("macosx"),
+            "x86_64-apple-ios" | "i386-apple-ios" | "aarch64-apple-ios-sim" => {
+                Ok("iphonesimulator")
+            }
+            "aarch64-apple-ios" | "armv7-apple-ios" | "armv7s-apple-ios" => Ok("iphoneos"),
+            "aarch64-apple-visionos-sim" => Ok("xrsimulator"),
+            "aarch64-apple-visionos" => Ok("xros"),
+            "aarch64-apple-tvos-sim" | "x86_64-apple-tvos" => Ok("appletvsimulator"),
+            "aarch64-apple-tvos" => Ok("appletvos"),
+            "aarch64-apple-watchos" | "armv7k-apple-watchos" | "arm64_32-apple-watchos" => {
+                Ok("watchos")
+            }
+
+            "aarch64-apple-watchos-sim" | "x86_64-apple-watchos-sim" => Ok("watchsimulator"),
+            _ => Err(anyhow!("Unsupported target for sdk: {target}")),
         }
     }
 }

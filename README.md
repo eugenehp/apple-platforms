@@ -32,6 +32,19 @@ Output:
 Converted from aarch64-apple-visionos to arm64-apple-xros
 ```
 
+### Run: `cargo run --example sdk`
+
+Output:
+
+```shell
+Converted from aarch64-apple-visionos to xros
+```
+
+## Notes
+
+- https://github.com/rust-lang/rust/issues/48862
+- https://github.com/apple/swift/blob/main/utils/build-script-impl
+
 ## Authors
 
 Copyright (c) 2024 Eugene Hauptmann
